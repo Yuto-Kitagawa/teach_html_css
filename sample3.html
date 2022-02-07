@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* デフォルト値を初期化 */
+    body {
+        margin: 0;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    /* オリジナルデザインを追加 */
+    .sample1 {
+        /*横向きに設定*/
+        display: flex;
+        /* 高さを設定 */
+        height: 30vh;
+    }
+
+    .content1 {
+        background-color: rgb(133, 173, 192);
+        width: 50%;
+    }
+
+    .content2 {
+        background-color: rgb(141, 202, 169);
+        width: 50%;
+    }
+
+    .sample2 {
+        /* sample1と見分けるために間を空ける */
+        margin-top: 10vh;
+        /* 高さを設定 */
+        height: 30vh;
+    }
+
+    /* クラス名にcontentがあれば反映 */
+    /* [class*="content"]{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } */
+</style>
+
+<body>
+
+    <!-- 外枠の高さは絶対値で指定する -->
+    <!-- 親要素の中に子要素を入れる -->
+    <div class="sample1">
+        <div class="content1">
+            <!-- displayをflexにすると、高さを設定していなくても、親要素の高さになる -->
+            <p>A</p>
+        </div>
+        <div class="content2">
+            <p>B</p>
+        </div>
+    </div>
+
+    <!-- 外枠の高さは絶対値で指定する -->
+    <div class="sample2">
+        <div class="content1">
+            <!-- 親要素の高さを30vhに設定しているが、
+                pタグの高さを100%にしていないため、高さが太くならない -->
+            <p>A</p>
+        </div>
+        <div class="content2">
+            <p>B</p>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

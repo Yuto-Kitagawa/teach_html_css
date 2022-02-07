@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* デフォルトのデザインを初期化 */
+    body {
+        margin: 0;
+    }
+
+    /* オリジナルのデザインを追加 */
+    .title {
+        /* 外側の空白を付与 */
+        margin: 10px;
+        /* 文字の色を設定 */
+        color: white;
+        background-color: blueviolet;
+        /* 内側の枠を設定 */
+        padding: 10px;
+        /* おまけ */
+        /* 文字の太さを設定(900が太い) */
+        font-weight: 900;
+    }
+
+    /* ulすべてに対して設定 */
+    /* ulのpaddingがデフォルトでついているので初期化 + marginをつける */
+    ul {
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    /* liすべてに対して設定 */
+    li {
+        background-color: turquoise;
+        color: white;
+        margin-bottom: 10px;
+    }
+
+    /* pタグ全体 */
+    p {
+        word-break: break-word;
+    }
+
+    /* フッター */
+    footer {
+        background-color: gray;
+    }
+
+    /* フッターのなかのpタグ */
+    footer>p {
+        color: white;
+        padding-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* フッターのなかのaタグ */
+    footer>a {
+        text-decoration: none;
+        color: black;
+    }
+</style>
+
+<!-- ブラウザで、右クリック > 検証で値をいじってみるとイメージがわきやすいかもしれないです。 -->
+
+<body>
+    <div class="title">
+        タイトル
+    </div>
+
+    <!-- ulをolにすると「・」ではなく番号が振られます -->
+    <ul>
+        <li>リスト1</li>
+        <li>リスト2</li>
+        <li>リスト3</li>
+        <li>リスト4</li>
+    </ul>
+
+    <h2>
+        タイトル2
+    </h2>
+
+    <p>本文****************************************</p>
+
+    <footer>
+        <p>サイトマップ</p>
+        <!-- hrefは押すと飛ぶリンク -->
+        <!-- ctrlを押しながらリンクをクリックすると飛びます -->
+        <a href="yutons.com">・サイトマップ</a>
+    </footer>
+</body>
+
+</html>
