@@ -1,0 +1,29 @@
+<!-- JavaScriptの練習 -->
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="input" placeholder="ここに文字を入力">
+    <button id="submit">表示</button>
+    <h2 id="show"></h2>
+
+    <script>
+        // document.〇〇でその要素を取得
+        // docuemnt.〇〇.addEventListenerでその要素が何かをした後の機能を書く
+        document.getElementById('submit').addEventListener('click', () => {
+            // log画面に入力された文字を表示
+            console.log(document.getElementById('input').value);
+            document.getElementById('show').textContent = document.getElementById('input').value;
+        })
+    </script>
+</body>
+
+</html>
