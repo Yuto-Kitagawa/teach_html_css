@@ -11,9 +11,19 @@
 
 <body>
 
-    <input type="text" id="input" placeholder="ここに文字を入力">
-    <button id="submit">表示</button>
-    <h2 id="show"></h2>
+    <section>
+        <input type="text" id="input" placeholder="ここに文字を入力">
+        <button id="submit">表示</button>
+        <h2 id="show"></h2>
+    </section>
+
+    <section>
+        <input type="number" placeholder="数字" id="a">
+        <span>+</span>
+        <input type="number" placeholder="数字" id="b">
+        <button id="culc">計算</button>
+
+    </section>
 
     <script>
         // document.〇〇でその要素を取得
@@ -21,8 +31,14 @@
         document.getElementById('submit').addEventListener('click', () => {
             // log画面に入力された文字を表示
             console.log(document.getElementById('input').value);
-            document.getElementById('show').textContent = document.getElementById('input').value;
+            // document.getElementById('show').textContent = document.getElementById('input').value;
         })
+    </script>
+
+    <script>
+        document.querySelector('#culc').addEventListener('click', () => {
+            console.log(Number(document.querySelector('#a').value)+ Number(document.querySelector('#b').value));
+        });
     </script>
 </body>
 
