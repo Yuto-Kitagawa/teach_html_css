@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        font-family: serif;
+    }
+
+    body {
+        text-align: center;
+        /* overflow-y: hidden; */
+        background-image: url(./img/schedule.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        margin: 6% auto;
+        font-size: 1.2em;
+    }
+
+    tr,
+    td {
+        border: 1px solid black;
+        padding: 20px;
+    }
+
+    .d-none {
+        display: none;
+    }
+</style>
+
+<body>
+    <table id="timeschedule">
+        <tr>
+            <td></td>
+            <td>月</td>
+            <td>火</td>
+            <td>水</td>
+            <td>木</td>
+            <td>金</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>国語</td>
+            <td>算数</td>
+            <td>音楽</td>
+            <td>社会</td>
+            <td>体育</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>算数</td>
+            <td>理科</td>
+            <td>国語</td>
+            <td>国語</td>
+            <td>算数</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>社会</td>
+            <td>音楽</td>
+            <td>図工</td>
+            <td>家庭科</td>
+            <td>国語</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>外国語</td>
+            <td>算数</td>
+            <td>体育</td>
+            <td>家庭科</td>
+            <td>理科</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>体育</td>
+            <td>道徳</td>
+            <td></td>
+            <td>理科</td>
+            <td>総合</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>国語</td>
+            <td>算数</td>
+            <td>音楽</td>
+            <td>社会</td>
+            <td>体育</td>
+        </tr>
+    </table>
+
+    <div class="" id="day"></div>
+    <div class="" id="time"></div>
+
+    <button id="button">切り替え</button>
+
+    <div class="" style="margin-top: 10vh;">@yuto all right researved</div>
+
+    <script>
+
+        document.querySelector('#button').addEventListener('click', () => {
+            document.querySelector('#timeschedule').classList.toggle('d-none');
+        })
+
+        function getTime() {
+            let d = new Date;
+            let hour = d.getHours();
+            let minute = d.getMinutes();
+            let second = d.getSeconds();
+
+            let time = hour + "時" + minute + "分" + second + "秒";
+
+            document.querySelector('#day').textContent = time;
+            window.requestAnimationFrame(getTime);
+        }
+
+        window.requestAnimationFrame(getTime);
+
+    </script>
+
+</body>
+
+</html>

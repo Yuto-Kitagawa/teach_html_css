@@ -26,7 +26,7 @@
     </section>
 
     <script>
-        // document.〇〇でその要素を取得
+        // document.〇〇でそのタグ要素を取得
         // docuemnt.〇〇.addEventListenerでその要素が何かをした後の機能を書く
         document.getElementById('submit').addEventListener('click', () => {
             // log画面に入力された文字を表示
@@ -40,6 +40,17 @@
             console.log(Number(document.querySelector('#a').value)+ Number(document.querySelector('#b').value));
         });
     </script>
+
+    <script>
+        window.onload = () =>{
+            console.log("ロードされました");
+        }
+
+        window.addEventListener('load',()=>{
+            console.log("ロードされました");
+        })
+    </script>
+    
 </body>
 
 </html>

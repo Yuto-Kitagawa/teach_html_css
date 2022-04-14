@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <style>
+        * {
+            font-family: serif;
+        }
+
+        body {
+            text-align: center;
+            /* overflow-y: hidden; */
+            background-image: url(./img/schedule.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .tenki {
+            color: white;
+            font-size: 2em;
+        }
+
+        .jikan {
+            color: white;
+            font-size: 2em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="" style="margin-top: 20vh;"></div>
+
+
+    <div class="jikan" id="jikan"></div>
+    <div class="tenki" id='messages'></div>
+
+
+
+    <!-- 天気予報APIを参照するためのjavascript -->
+    <!-- <script src="weatherForcast2.js"></script> -->
+    <script src="weatherForcast.js"></script>
+
+    <script>
+        let d = new Date;
+
+        let year = d.getFullYear();// 年
+        let month = d.getMonth() + 1;// 月
+        let date = d.getDate();// 日
+
+        //穴あき
+        let date_text = year + "年" + month + "月" + date + "日";
+
+        document.getElementById('jikan').textContent = date_text;
+    </script>
+</body>
+
+</html>
