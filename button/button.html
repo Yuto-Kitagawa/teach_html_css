@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /**** ボタン1 ****/
+    .b1 {
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+
+        /* 文字のサイズ → 1.2em */
+        font-size: ;
+
+        /* 文字の色 → 黒*/
+        color: ;
+
+        /* 枠の色 → 黒 */
+        outline: 2px solid;
+
+        padding: 20px 50px;
+        overflow: hidden;
+        transform: 1s color ease-in-out;
+        display: inline;
+        position: absolute;
+        top: 10vh;
+        left: 43vw;
+
+        /* 最後に消してね! */
+        display: none;
+    }
+
+    /* カーソル(マウス)がボタンの上に来た時 */
+    .b1:hover {
+        /* 文字の色 → 白 */
+        color: ;
+    }
+
+    .b1::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -50px;
+        width: 0;
+        height: 100%;
+
+        /* 背景の色 →　黒*/
+        background-color: ;
+
+        transform: skewX(35deg);
+        z-index: -1;
+        transition: .6s width ease;
+    }
+
+    .b1:hover::before {
+        width: 150%;
+    }
+
+
+    /********** ボタン2 **********/
+    .b2 {
+        text-decoration: none;
+        font-size: 1.2em;
+
+        /* 文字の色 → 黒 */
+        color: ;
+
+        padding: 20px 50px;
+        border: 2px solid black;
+        position: absolute;
+        top: 40vh;
+        left: 43vw;
+
+        /* 最後に消してね! */
+        display: none;
+    }
+
+    .b2::before,
+    .b2::after {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border: inherit;
+        transition: all .5s;
+    }
+
+    .b2::before {
+        top: -15px;
+        left: -15px;
+        border-width: 2px 0 0 2px;
+    }
+
+    .b2::after {
+        bottom: -15px;
+        right: -15px;
+        border-width: 0 2px 2px 0;
+    }
+
+    .b2:hover::before,
+    .b2:hover::after {
+        width: calc(100% + 27px);
+        height: calc(100% + 27px);
+    }
+
+
+    /********** ボタン3 **********/
+    .b3 {
+        display: inline-block;
+
+        /* 文字の色 → 黒 */
+        color: ;
+
+        text-decoration: none;
+        font-size: 1.2em;
+        padding: 20px 50px;
+
+        /* 枠の色 →　黒*/
+        border: 2px solid;
+
+        /* 枠の周り → 10px */
+        border-radius: ;
+
+        position: absolute;
+        top: 70vh;
+        left: 43vw;
+
+        /* 枠の影の色 → 好きな色にしてね! */
+        box-shadow: 0 0 15px;
+
+        /* 最後に消してね! */
+        display: none;
+    }
+
+    .b3:hover {
+        animation: b3-animation 1s ease-in-out;
+    }
+
+    @keyframes b3-animation {
+        0% {
+            /* 枠の色(好きな色)を二つ書いてね! */
+            box-shadow: 0 0 55px,
+                0 0 15px;
+        }
+    }
+</style>
+
+<body>
+
+    <a class="b1" href="#">ボタン1</a>
+
+    <a class="b2" href="#">ボタン2</a>
+
+    <a class="b3" href="#">ボタン3</a>
+
+</body>
+
+</html>

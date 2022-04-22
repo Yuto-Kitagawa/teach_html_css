@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        overflow: hidden;
+    }
+
+    #time {
+        font-size: 3em;
+        height: 60vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #stop {
+        display: flex;
+        margin: 0 auto;
+    }
+</style>
+
+<body>
+
+    <div id="time"></div>
+    <button id="stop">STOP</button>
+
+    <script>
+        let timer = 0
+        document.querySelector('#time').textContent = timer;
+        setInterval(() => {
+            timer += 1;
+            document.querySelector('#time').textContent = timer;
+        }, 1000);
+    </script>
+</body>
+
+</html>
