@@ -2,7 +2,7 @@ const timer_display = document.getElementById('timer-display');
 
 const timer_button = document.getElementById('timer-button');
 // 穴あき
-timer_button.addEventListener('', timerButton);
+timer_button.addEventListener('click', timerButton);
 
 /*
  * スタートボタンが押されたときに実行され
