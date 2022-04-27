@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>img_adjast</title>
+</head>
+<style>
+    .img1 {
+        width: 100%;
+    }
+
+    .img2 {
+        height: 40vh;
+    }
+
+    .img3 {
+        width: 70%;
+        height: 50vh;
+    }
+
+    .img4 {
+        width: 70%;
+        object-fit: cover;
+        height: 50vh;
+    }
+</style>
+
+<body>
+    <!-- 指定なし →　写真の画質のままになる(ゆがまない) -->
+    <img src="./img/Cat_4.jpg" alt="">
+
+    <!-- width:100%にすると、親要素の幅に縮小される(ゆがまない) -->
+    <img src="./img/Cat_4.jpg" class="img1" alt="">
+
+    <!-- 高さを指定すると、その高さに縮小される(ゆがまない) -->
+    <img src="./img/Cat_4.jpg" class="img2" alt="">
+
+    <!-- 高さも幅も指定する(ゆがむ) -->
+    <img src="./img/Cat_4.jpg" class="img3" alt="">
+
+    <!-- 高さも幅も指定し、ゆがませないようにする
+        ・cover→勝手にはみ出した部分が切り取られる
+        ・contain→幅、高さに合わせて切り抜かれないように縮小される
+     -->
+    <img src="./img/Cat_4.jpg" class="img4" alt="">
+
+
+
+</body>
+
+</html>

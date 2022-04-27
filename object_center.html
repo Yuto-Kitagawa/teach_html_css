@@ -24,17 +24,59 @@
     .m-auto {
         margin: auto;
     }
+
+    .d-flex {
+        display: flex;
+    }
+
+    .justify-content-center {
+        justify-content: center;
+    }
+
+    .align-items-center {
+        align-items: center;
+    }
+
+    .position-relative {
+        position: relative;
+    }
+
+    .position-absolute {
+        position: absolute;
+    }
+
+    .top-50 {
+        top: 50%;
+    }
+
+    .left-50 {
+        left: 50%;
+    }
+
+    .transform-absolute-center {
+        transform: translate(-50%, -50%);
+    }
 </style>
 
 <body>
     <!-- オブジェクトを真ん中にする方法 -->
 
-    <!-- オブジェクトの長さを親要素の100％にしたあと、中の要素を真ん中にする -->
+    <!-- オブジェクトの長さを親要素の100％にしたあと、左右真ん中にする -->
     <div class="w-100 text-center">aaa</div>
 
     <!-- オブジェクトの長さをコンテンツに合わして真ん中にする -->
     <div class="w-fit m-auto">bbb</div>
 
+    <!-- オブジェクトの長さは親要素の100％のまま、左右真ん中にする -->
+    <div class="d-flex justify-content-center">ccc</div>
+
+    <!-- オブジェクトの長さは親要素の100％のまま、左右上下真ん中にする -->
+    <div class="d-flex justify-content-center align-items-center">ddd</div>
+
+    <!-- positoin:absoluteで左右上下中央にする -->
+    <div class="position-relative" style="height: 60vh;">
+        <div class="position-absolute top-50 left-50 transform-absolute-center">eee</div>
+    </div>
 
 </body>
 
